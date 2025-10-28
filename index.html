@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>💖 Pra você 💖</title>
+<style>
+  body{
+    font-family:"Comic Sans MS", cursive;
+    margin:0; padding:0;
+    color:#000; /* ALTERADO para preto */
+    text-align:center;
+    background:url('bg-1.jpg') center/cover fixed no-repeat;
+    position:relative;
+  }
+  /* blur no fundo */
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    z-index:-1;
+  }
+  .music-btn-box{
+    position:relative;
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+  }
+  .arrow{
+    font-size:28px;
+    color:#ff5fa2;
+  }
+  .heart-btn{
+    font-size:32px;
+    cursor:pointer;
+    transition:transform .2s;
+  }
+  .heart-btn:active{transform:scale(.85);}
+  img{max-width:90%;margin:1rem auto;border-radius:12px;}
+  section{padding:2rem;}
+  h1{font-size:3rem;margin:1rem;}
+  p{font-size:1.2rem;margin:.5rem;}
+</style>
+</head>
+<body>
+
+<div class="music-btn-box">
+  <span class="arrow">➤</span> <!-- seta aponta para direita = para o coração -->
+  <span id="heart" class="heart-btn">♡</span>
+  <span class="arrow">◀</span> <!-- seta aponta para esquerda = para o coração -->
+</div>
+
+<audio id="music" src="music.mp3"></audio>
+
+<div class="site">
+  <h1>TE AMOOOOOO</h1>
+  <section>
+    <img src="img-2.jpg" alt="Imagem 2">
+    <p>desculpa ser um bobão às vezes, mas pra você me perdoar aqui o</p>
+  </section>
+  <section>
+    <img src="img-3.jpg" alt="Imagem 3">
+    <p>sabia que você é linda, perfeita, inteligente, gostosa, artista d+, fodona, nerd, furry e meu amor?</p>
+  </section>
+  <section>
+    <img src="img-4.jpg" alt="Imagem 4">
+    <p>eu sei que você tá mal, mas você vai superar tudo, porque você é forte e fodona. te amo ❤️</p>
+  </section>
+  <section>
+    <img src="img-5.jpg" alt="Imagem final">
+  </section>
+</div>
+
+<script>
+  const music = document.getElementById("music");
+  const heart = document.getElementById("heart");
+  music.volume = 0.4;
+
+  let playing = false;
+
+  heart.onclick = () => {
+    if(!playing){
+      music.play();
+      heart.textContent = "❤️";
+      playing = true;
+    } else {
+      music.pause();
+      heart.textContent = "♡";
+      playing = false;
+    }
+  };
+</script>
+
+</body>
+</html>
