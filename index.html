@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>💖 Pra você 💖</title>
+<style>
+    body{
+        font-family:"Comic Sans MS";
+        margin:0;
+        background:url("bg-1.jpg") center/cover fixed;
+        color:white;
+        text-align:center;
+        padding-top:150px; /* espaço pra não cobrir o h1 */
+    }
+
+    /* PLAYER FIXO NO TOPO */
+    .player-wrap{
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        z-index:9999;
+        padding:1rem 0;
+        backdrop-filter: blur(10px);
+        background:rgba(0,0,0,0.55);
+    }
+    .player{
+        margin:auto;
+        padding:1rem;
+        width:90%;
+        max-width:500px;
+        border-radius:20px;
+    }
+    audio{ width:100%; }
+
+    .site{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:2rem;
+    }
+    section{ padding:2rem; max-width:800px;}
+    img{ max-width:90%; border-radius:20px; margin:1rem auto; display:block;}
+    h1{ font-size:3rem; margin:1rem;}
+    p{ font-size:1.2rem; margin:0.5rem;}
+</style>
+</head>
+<body>
+
+<div class="player-wrap">
+  <div class="player">
+    <h2>I Wanna Be Your Boyfriend</h2>
+    <audio controls>
+      <source src="music.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+
+<div class="site">
+    <h1>TE AMOOOOOO</h1>
+
+    <section>
+        <img src="img-2.jpg" alt="Imagem 2">
+        <p>desculpa ser um bobão às vezes, mas pra você me perdoar aqui o</p>
+    </section>
+
+    <section>
+        <img src="img-3.jpg" alt="Imagem 3">
+        <p>sabia que você é linda, perfeita, inteligente, gostosa...</p>
+    </section>
+
+    <section>
+        <img src="img-4.jpg" alt="Imagem 4">
+        <p>eu sei que você tá mal, mas você vai superar tudo,<br>porque você é forte e fodona. te amo 💗</p>
+    </section>
+
+    <section>
+        <img src="img-5.jpg" alt="Imagem final">
+    </section>
+</div>
+
+</body>
+</html>
